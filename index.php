@@ -2,7 +2,7 @@
 require_once 'assets/php/controller/controllerAlunos.php';
 ?>
 <!doctype html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <title>Alunos Matriculados</title>
     <meta charset="utf-8">
