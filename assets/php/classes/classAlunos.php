@@ -42,6 +42,14 @@ class Alunos{
             return 0;
         }
     }
+
+    public function getAluno($matricula) {
+        $query = "SELECT * FROM Alunos WHERE `matricula` = :matricula";
+        $stmt  = $this->conn->prepare($query);
+        $stmt->bindParam(":matricula", $matricula);
+        $stmt->execute();
+        return $stmt;
+    }
 }
 
 

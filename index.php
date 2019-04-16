@@ -34,7 +34,7 @@ require_once 'assets/php/controller/controllerAlunos.php';
                   <tbody>
                       <?php foreach($listAlunos as $aluno){ ?>
                       <tr>
-                          <td><?=$aluno->matricula?></td>
+                          <td><a href="aluno.php?matricula=<?=$aluno->matricula?>"><?=$aluno->matricula?></a></td>
                           <td><?=$aluno->nome?></td>
                           <td><?=$aluno->telefone?></td>
                       </tr>

@@ -13,7 +13,14 @@ if(isset($_POST['add'])){
 
   $result = $alunos->insertAluno($dados);
 }
+
+if(isset($_GET['matricula'])){
+  $matricula = $_GET['matricula'];
+  $aluno = $alunos->getAluno($matricula)->fetch(PDO::FETCH_OBJ);
+}
 // Chamando a funcão que devolve uma query executada
 $listAlunos = $alunos->listAll()->fetchAll(PDO::FETCH_OBJ);
+
+
 ?>
 
