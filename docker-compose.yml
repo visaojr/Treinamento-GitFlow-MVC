@@ -1,0 +1,12 @@
+version: "3"
+services:
+  web:
+    build: .
+    image: php:7.2-apache
+    container_name: php_${PROJECT_NAME}
+    volumes: 
+      - ./${PROJECT_NAME}:/var/www/html/
+    ports: 
+      - "3000:80"
+    stdin_open: true
+    tty: true
